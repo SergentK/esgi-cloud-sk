@@ -3,17 +3,17 @@ import createError from 'http-errors'
 import multer from 'multer'
 
 // TODO: import Firebase dependencies
-import {getAuth, signInWithEmailAndPassword} from '/firebase.js/auth'
+import {getAuth, signInWithEmailAndPassword} from 'firebase/auth'
 
 
 // TODO: import Firebase applications
-import { FirebaseApp } from '../firebase.js'
+import firebaseApp  from '../firebase.js'
 
 const router = express.Router()
 const upload = multer()
 
 // TODO: create Firebase modules
-const auth = getAuth(FirebaseApp)
+const auth = getAuth(firebaseApp)
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
